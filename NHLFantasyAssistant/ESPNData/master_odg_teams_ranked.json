@@ -1,0 +1,546 @@
+{
+    "Anaheim Ducks": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 15,
+                "Wed": 9,
+                "Thu": 13,
+                "Fri": 11,
+                "Sat": 13,
+                "Sun": 12
+            },
+            "ODG": 41
+        }
+    },
+    "Utah Mammoth": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 11,
+                "Tue": 13,
+                "Wed": 11,
+                "Thu": 13,
+                "Fri": 9,
+                "Sat": 15,
+                "Sun": 10
+            },
+            "ODG": 41
+        }
+    },
+    "Chicago Blackhawks": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 8,
+                "Tue": 12,
+                "Wed": 8,
+                "Thu": 16,
+                "Fri": 11,
+                "Sat": 14,
+                "Sun": 13
+            },
+            "ODG": 40
+        }
+    },
+    "New York Rangers": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 14,
+                "Tue": 11,
+                "Wed": 10,
+                "Thu": 15,
+                "Fri": 5,
+                "Sat": 19,
+                "Sun": 8
+            },
+            "ODG": 37
+        }
+    },
+    "St. Louis Blues": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 11,
+                "Tue": 12,
+                "Wed": 10,
+                "Thu": 14,
+                "Fri": 10,
+                "Sat": 19,
+                "Sun": 6
+            },
+            "ODG": 37
+        }
+    },
+    "Washington Capitals": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 7,
+                "Tue": 14,
+                "Wed": 12,
+                "Thu": 12,
+                "Fri": 9,
+                "Sat": 19,
+                "Sun": 9
+            },
+            "ODG": 37
+        }
+    },
+    "Calgary Flames": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 13,
+                "Wed": 12,
+                "Thu": 15,
+                "Fri": 5,
+                "Sat": 19,
+                "Sun": 9
+            },
+            "ODG": 35
+        }
+    },
+    "Colorado Avalanche": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 15,
+                "Wed": 8,
+                "Thu": 14,
+                "Fri": 7,
+                "Sat": 18,
+                "Sun": 11
+            },
+            "ODG": 35
+        }
+    },
+    "Detroit Red Wings": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 12,
+                "Wed": 10,
+                "Thu": 16,
+                "Fri": 7,
+                "Sat": 19,
+                "Sun": 9
+            },
+            "ODG": 35
+        }
+    },
+    "Vancouver Canucks": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 12,
+                "Tue": 13,
+                "Wed": 7,
+                "Thu": 15,
+                "Fri": 8,
+                "Sat": 19,
+                "Sun": 8
+            },
+            "ODG": 35
+        }
+    },
+    "Buffalo Sabres": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 11,
+                "Tue": 12,
+                "Wed": 12,
+                "Thu": 16,
+                "Fri": 6,
+                "Sat": 20,
+                "Sun": 5
+            },
+            "ODG": 34
+        }
+    },
+    "New Jersey Devils": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 7,
+                "Tue": 15,
+                "Wed": 10,
+                "Thu": 14,
+                "Fri": 6,
+                "Sat": 19,
+                "Sun": 11
+            },
+            "ODG": 34
+        }
+    },
+    "Vegas Golden Knights": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 7,
+                "Tue": 14,
+                "Wed": 9,
+                "Thu": 16,
+                "Fri": 7,
+                "Sat": 18,
+                "Sun": 11
+            },
+            "ODG": 34
+        }
+    },
+    "Los Angeles Kings": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 14,
+                "Tue": 12,
+                "Wed": 8,
+                "Thu": 18,
+                "Fri": 5,
+                "Sat": 21,
+                "Sun": 4
+            },
+            "ODG": 31
+        }
+    },
+    "Minnesota Wild": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 15,
+                "Wed": 5,
+                "Thu": 16,
+                "Fri": 7,
+                "Sat": 20,
+                "Sun": 10
+            },
+            "ODG": 31
+        }
+    },
+    "Philadelphia Flyers": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 11,
+                "Tue": 12,
+                "Wed": 10,
+                "Thu": 19,
+                "Fri": 4,
+                "Sat": 20,
+                "Sun": 6
+            },
+            "ODG": 31
+        }
+    },
+    "San Jose Sharks": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 7,
+                "Tue": 15,
+                "Wed": 9,
+                "Thu": 16,
+                "Fri": 8,
+                "Sat": 20,
+                "Sun": 7
+            },
+            "ODG": 31
+        }
+    },
+    "Winnipeg Jets": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 15,
+                "Wed": 6,
+                "Thu": 18,
+                "Fri": 8,
+                "Sat": 18,
+                "Sun": 8
+            },
+            "ODG": 31
+        }
+    },
+    "Florida Panthers": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 10,
+                "Tue": 15,
+                "Wed": 6,
+                "Thu": 19,
+                "Fri": 7,
+                "Sat": 18,
+                "Sun": 7
+            },
+            "ODG": 30
+        }
+    },
+    "Carolina Hurricanes": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 7,
+                "Tue": 16,
+                "Wed": 5,
+                "Thu": 16,
+                "Fri": 7,
+                "Sat": 21,
+                "Sun": 10
+            },
+            "ODG": 29
+        }
+    },
+    "Dallas Stars": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 6,
+                "Tue": 19,
+                "Wed": 8,
+                "Thu": 17,
+                "Fri": 5,
+                "Sat": 17,
+                "Sun": 10
+            },
+            "ODG": 29
+        }
+    },
+    "Seattle Kraken": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 11,
+                "Tue": 15,
+                "Wed": 9,
+                "Thu": 18,
+                "Fri": 3,
+                "Sat": 20,
+                "Sun": 6
+            },
+            "ODG": 29
+        }
+    },
+    "Toronto Maple Leafs": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 16,
+                "Wed": 10,
+                "Thu": 15,
+                "Fri": 4,
+                "Sat": 23,
+                "Sun": 5
+            },
+            "ODG": 28
+        }
+    },
+    "Pittsburgh Penguins": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 7,
+                "Tue": 15,
+                "Wed": 3,
+                "Thu": 20,
+                "Fri": 3,
+                "Sat": 20,
+                "Sun": 14
+            },
+            "ODG": 27
+        }
+    },
+    "Tampa Bay Lightning": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 16,
+                "Wed": 5,
+                "Thu": 18,
+                "Fri": 4,
+                "Sat": 21,
+                "Sun": 9
+            },
+            "ODG": 27
+        }
+    },
+    "Columbus Blue Jackets": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 17,
+                "Wed": 6,
+                "Thu": 17,
+                "Fri": 3,
+                "Sat": 22,
+                "Sun": 8
+            },
+            "ODG": 26
+        }
+    },
+    "New York Islanders": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 6,
+                "Tue": 17,
+                "Wed": 4,
+                "Thu": 18,
+                "Fri": 7,
+                "Sat": 21,
+                "Sun": 9
+            },
+            "ODG": 26
+        }
+    },
+    "Ottawa Senators": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 9,
+                "Tue": 13,
+                "Wed": 8,
+                "Thu": 20,
+                "Fri": 1,
+                "Sat": 23,
+                "Sun": 8
+            },
+            "ODG": 26
+        }
+    },
+    "Boston Bruins": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 6,
+                "Tue": 19,
+                "Wed": 6,
+                "Thu": 18,
+                "Fri": 2,
+                "Sat": 21,
+                "Sun": 10
+            },
+            "ODG": 24
+        }
+    },
+    "Nashville Predators": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 10,
+                "Tue": 16,
+                "Wed": 4,
+                "Thu": 20,
+                "Fri": 3,
+                "Sat": 22,
+                "Sun": 7
+            },
+            "ODG": 24
+        }
+    },
+    "Edmonton Oilers": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 7,
+                "Tue": 19,
+                "Wed": 7,
+                "Thu": 18,
+                "Fri": 2,
+                "Sat": 22,
+                "Sun": 7
+            },
+            "ODG": 23
+        }
+    },
+    "Montr\u00e9al Canadiens": {
+        "Games": {
+            "Home": 41,
+            "Away": 41,
+            "Total": 82,
+            "Weekdays": {
+                "Mon": 4,
+                "Tue": 19,
+                "Wed": 7,
+                "Thu": 18,
+                "Fri": 2,
+                "Sat": 23,
+                "Sun": 9
+            },
+            "ODG": 22
+        }
+    }
+}

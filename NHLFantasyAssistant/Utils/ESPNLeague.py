@@ -2,9 +2,12 @@ from espn_api.hockey import League as ESPNLeague
 from MainObjects.Team import Team
 from MainObjects.Skater import Skater
 from MainObjects.Goalie import Goalie
-# import browser_cookie3
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 # # Extract cookies from the browser
+username = input("Enter your ESPN username: ")
+
 # cookies = browser_cookie3.chrome(domain_name='https://fantasy.espn.com')
 
 # # Find the required tokens
