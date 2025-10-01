@@ -26,9 +26,9 @@ class ESPN:
         # self.get_nhl_schedule()
         # self.get_nhl_team_rosters()
         # self.master_schedule_formatter()
-        matchup_file = 'ESPNData/april_games.json'
+        matchup_file = 'ESPNData/matchups/10/matchup_01.json'
         self.games_by_matchup(matchup_file,
-            start_date=date(2026, 4, 1), matchup_days=timedelta(30))
+            start_date=date(2025, 10, 7), matchup_days=timedelta(6))
         self.matchup_analysis(matchup_file)
         # self.season_weekday_analysis()
         self.matchup_team_ranks(matchup_file)
@@ -209,7 +209,9 @@ class ESPN:
                         "Fri": 0,
                         "Sat": 0,
                         "Sun": 0
-                    }
+                    },
+                    'BB': 0,
+                    'Rest': 0
                 }
             }
             for i in range(32)
@@ -231,7 +233,10 @@ class ESPN:
                 analysis_dict[away_name]["Games"]["Away"] += 1
                 analysis_dict[away_name]["Games"]["Weekdays"][weekday_str] += 1
 
+        analysis_dict = self.rest_days_analysis(analysis_dict)
         analysis_sorted_dict = dict(sorted(analysis_dict.items(),
+            key=lambda item: item[1]['Games']['BB']))
+        analysis_sorted_dict = dict(sorted(analysis_sorted_dict.items(),
             key=lambda item: item[1]["Games"]["Total"], reverse=True))
 
         return analysis_sorted_dict
@@ -255,5 +260,20 @@ class ESPN:
         analysis_sorted_dict = self.matchup_analysis(matchup_file)
         with open(f"{matchup_file[:-5]}_ranked.json", "w", encoding='utf-8') as f:
             json.dump(analysis_sorted_dict, f, indent=4)
+
+    def rest_days_analysis(self, games_dict: dict):
+        prev_val = None
+        for i in range(32):
+            name = list(self.constant_obj.pro_team_abbrev.keys())[i]
+            team_dict = games_dict[name]['Games']
+            for val in team_dict['Weekdays'].values():
+                if prev_val and val:
+                    team_dict['BB'] += 1
+                if val == 0:
+                    team_dict['Rest'] += 1
+                if prev_val is None:
+                    prev_val = val
+        return games_dict
+            
 
 ESPN_data = ESPN()
