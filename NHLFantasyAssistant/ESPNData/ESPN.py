@@ -26,9 +26,9 @@ class ESPN:
         # self.get_nhl_schedule()
         # self.get_nhl_team_rosters()
         # self.master_schedule_formatter()
-        matchup_file = 'ESPNData/matchup_21.json'
+        matchup_file = 'ESPNData/april_games.json'
         self.games_by_matchup(matchup_file,
-            start_date=date(2026, 3, 9))
+            start_date=date(2026, 4, 1), matchup_days=timedelta(30))
         self.matchup_analysis(matchup_file)
         # self.season_weekday_analysis()
         self.matchup_team_ranks(matchup_file)
