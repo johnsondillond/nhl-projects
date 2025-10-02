@@ -26,9 +26,9 @@ class ESPN:
         # self.get_nhl_schedule()
         # self.get_nhl_team_rosters()
         # self.master_schedule_formatter()
-        matchup_file = 'ESPNData/matchups/10/matchup_01.json'
+        matchup_file = 'ESPNData/matchups/10/matchup_03.json'
         self.games_by_matchup(matchup_file,
-            start_date=date(2025, 10, 7), matchup_days=timedelta(6))
+            start_date=date(2025, 10, 20))
         self.matchup_analysis(matchup_file)
         # self.season_weekday_analysis()
         self.matchup_team_ranks(matchup_file)
@@ -167,7 +167,7 @@ class ESPN:
         with open("ESPNData/master_schedule_25_26_season.json", "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
 
-    def games_by_matchup(self, matchup_file: str, 
+    def games_by_matchup(self, matchup_file: str,
             start_date: date=None, matchup_days: timedelta=None):
         """
         This should be the first week of reg season games
@@ -195,8 +195,23 @@ class ESPN:
             json.dump(data, f, indent=4)
 
     def matchup_analysis(self, matchup_file: str):
+        team_names = []
+        for i in range(32):
+            team_names.append(list(self.constant_obj.pro_team_abbrev.keys())[i])
+        matchup_num = int(matchup_file[-7:-5])
+        if matchup_num - 1 > 0:
+            matchup_num = matchup_num - 1
+            if matchup_num > 10:
+                prev_matchup_file = matchup_file.split('_')[0] + '_' + str(matchup_num) + '_ranked.json'
+            else:
+                prev_matchup_file = matchup_file.split('_')[0] + '_0' + str(matchup_num) + '_ranked.json'
+            with open(prev_matchup_file, 'r', encoding='utf-8') as f:
+                prev_data = json.load(f)
+            prev_sunday_dict = {}
+            for team_name in team_names:
+                prev_sunday_dict[team_name] = prev_data[team_name]['Games']['Weekdays']['Sun']
         analysis_dict = {
-        list(self.constant_obj.pro_team_abbrev.keys())[i]: {
+            team_names[i]: {
                 "Games": {
                     "Home": 0,
                     "Away": 0,
@@ -210,6 +225,7 @@ class ESPN:
                         "Sat": 0,
                         "Sun": 0
                     },
+                    'PrevSun': prev_sunday_dict[team_names[i]],
                     'BB': 0,
                     'Rest': 0
                 }
@@ -262,17 +278,18 @@ class ESPN:
             json.dump(analysis_sorted_dict, f, indent=4)
 
     def rest_days_analysis(self, games_dict: dict):
-        prev_val = None
         for i in range(32):
             name = list(self.constant_obj.pro_team_abbrev.keys())[i]
             team_dict = games_dict[name]['Games']
-            for val in team_dict['Weekdays'].values():
-                if prev_val and val:
-                    team_dict['BB'] += 1
+            prev_val = team_dict['PrevSun']
+            for val in team_dict['Weekdays'].values():      
                 if val == 0:
                     team_dict['Rest'] += 1
-                if prev_val is None:
                     prev_val = val
+                    continue
+                if prev_val == 1:
+                    team_dict['BB'] += 1
+                prev_val = val
         return games_dict
             
 

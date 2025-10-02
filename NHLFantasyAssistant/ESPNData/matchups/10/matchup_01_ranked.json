@@ -13,44 +13,8 @@
                 "Sat": 1,
                 "Sun": 1
             },
-            "BB": 0,
+            "BB": 1,
             "Rest": 3
-        }
-    },
-    "Boston Bruins": {
-        "Games": {
-            "Home": 2,
-            "Away": 1,
-            "Total": 3,
-            "Weekdays": {
-                "Mon": 0,
-                "Tue": 0,
-                "Wed": 1,
-                "Thu": 1,
-                "Fri": 0,
-                "Sat": 1,
-                "Sun": 0
-            },
-            "BB": 0,
-            "Rest": 4
-        }
-    },
-    "Calgary Flames": {
-        "Games": {
-            "Home": 1,
-            "Away": 2,
-            "Total": 3,
-            "Weekdays": {
-                "Mon": 0,
-                "Tue": 0,
-                "Wed": 1,
-                "Thu": 1,
-                "Fri": 0,
-                "Sat": 1,
-                "Sun": 0
-            },
-            "BB": 0,
-            "Rest": 4
         }
     },
     "Chicago Blackhawks": {
@@ -107,42 +71,6 @@
             "Rest": 4
         }
     },
-    "Los Angeles Kings": {
-        "Games": {
-            "Home": 1,
-            "Away": 2,
-            "Total": 3,
-            "Weekdays": {
-                "Mon": 0,
-                "Tue": 1,
-                "Wed": 1,
-                "Thu": 0,
-                "Fri": 0,
-                "Sat": 1,
-                "Sun": 0
-            },
-            "BB": 0,
-            "Rest": 4
-        }
-    },
-    "Montr\u00e9al Canadiens": {
-        "Games": {
-            "Home": 0,
-            "Away": 3,
-            "Total": 3,
-            "Weekdays": {
-                "Mon": 0,
-                "Tue": 0,
-                "Wed": 1,
-                "Thu": 1,
-                "Fri": 0,
-                "Sat": 1,
-                "Sun": 0
-            },
-            "BB": 0,
-            "Rest": 4
-        }
-    },
     "Pittsburgh Penguins": {
         "Games": {
             "Home": 2,
@@ -161,6 +89,78 @@
             "Rest": 4
         }
     },
+    "Boston Bruins": {
+        "Games": {
+            "Home": 2,
+            "Away": 1,
+            "Total": 3,
+            "Weekdays": {
+                "Mon": 0,
+                "Tue": 0,
+                "Wed": 1,
+                "Thu": 1,
+                "Fri": 0,
+                "Sat": 1,
+                "Sun": 0
+            },
+            "BB": 1,
+            "Rest": 4
+        }
+    },
+    "Calgary Flames": {
+        "Games": {
+            "Home": 1,
+            "Away": 2,
+            "Total": 3,
+            "Weekdays": {
+                "Mon": 0,
+                "Tue": 0,
+                "Wed": 1,
+                "Thu": 1,
+                "Fri": 0,
+                "Sat": 1,
+                "Sun": 0
+            },
+            "BB": 1,
+            "Rest": 4
+        }
+    },
+    "Los Angeles Kings": {
+        "Games": {
+            "Home": 1,
+            "Away": 2,
+            "Total": 3,
+            "Weekdays": {
+                "Mon": 0,
+                "Tue": 1,
+                "Wed": 1,
+                "Thu": 0,
+                "Fri": 0,
+                "Sat": 1,
+                "Sun": 0
+            },
+            "BB": 1,
+            "Rest": 4
+        }
+    },
+    "Montr\u00e9al Canadiens": {
+        "Games": {
+            "Home": 0,
+            "Away": 3,
+            "Total": 3,
+            "Weekdays": {
+                "Mon": 0,
+                "Tue": 0,
+                "Wed": 1,
+                "Thu": 1,
+                "Fri": 0,
+                "Sat": 1,
+                "Sun": 0
+            },
+            "BB": 1,
+            "Rest": 4
+        }
+    },
     "Vegas Golden Knights": {
         "Games": {
             "Home": 1,
@@ -175,7 +175,7 @@
                 "Sat": 1,
                 "Sun": 0
             },
-            "BB": 0,
+            "BB": 1,
             "Rest": 4
         }
     },
@@ -193,7 +193,7 @@
                 "Sat": 1,
                 "Sun": 1
             },
-            "BB": 0,
+            "BB": 1,
             "Rest": 4
         }
     },
