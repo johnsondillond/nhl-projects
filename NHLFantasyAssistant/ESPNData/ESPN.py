@@ -6,6 +6,9 @@ from datetime import date, timedelta
 import json
 import os
 import sys
+import fnmatch
+import matplotlib.pyplot as plt
+import polars as pl
 import requests
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # pylint: disable=C0413
@@ -21,17 +24,18 @@ class ESPN:
         self.nhl_teams, self.nhl_clubhouse_links, self.nhl_roster_links, \
         self.nhl_stats_links, self.nhl_schedules_links = self.load_teams()
         # self.get_nhl_teams()
-        # self.get_nhl_team_standings()
+        self.get_nhl_team_standings()
         # self.get_nhl_rem_schedule()
         # self.get_nhl_schedule()
         # self.get_nhl_team_rosters()
         # self.master_schedule_formatter()
-        matchup_file = 'ESPNData/matchups/10/matchup_03.json'
+        matchup_file = 'ESPNData/matchups/10/matchup_02.json'
         self.games_by_matchup(matchup_file,
-            start_date=date(2025, 10, 20))
+            start_date=date(2025, 10, 8))
         self.matchup_analysis(matchup_file)
         # self.season_weekday_analysis()
         self.matchup_team_ranks(matchup_file)
+        self.convert_to_csv(matchup_file)
 
     def get_nhl_teams(self):
         api_endpoint = self.base_url + "en/team"
@@ -107,11 +111,12 @@ class ESPN:
             standing['goalsFor'] = standing['goalFor']
             del standing["otLosses"], standing['goalAgainst'], standing['goalFor']
             standing["OtWins"] = standing["regulationPlusOtWins"] - standing["regulationWins"]
-            standing["OtWinPctg"] = standing["OtWins"] / (standing["OtWins"] + standing["OtLosses"])
-            standing["shootoutWinPctg"] = standing["shootoutWins"] / (standing["shootoutWins"] + standing["shootoutLosses"]) if standing["shootoutWins"] != 0 and standing["shootoutLosses"] != 0 else 0
+            standing["OtWinPctg"] = standing["OtWins"] / (standing["OtWins"] + standing["OtLosses"]) if standing["OtWins"] != 0 or standing["OtLosses"] != 0 else 0
+            standing["shootoutWinPctg"] = standing["shootoutWins"] / (standing["shootoutWins"] + standing["shootoutLosses"]) if standing["shootoutWins"] != 0 or standing["shootoutLosses"] != 0 else 0
             standing["roadPointPctg"] = standing['roadPoints'] / (standing['roadGamesPlayed'] * 2)
             standing["homePointPctg"] = standing["homePoints"] / (standing['homeGamesPlayed'] * 2)
-            standing['goalsAgainstPctg'] = standing['goalsAgainst'] / standing['gamesPlayed']
+            standing['goalsForPerGame'] = standing['goalsFor'] / standing['gamesPlayed']
+            standing['goalsAgainstPerGame'] = standing['goalsAgainst'] / standing['gamesPlayed']
 
         #   if standing["goalsAgainstPctg"] < min_ga_pct[1]:
         #         min_ga_pct = (standing["teamName"]["default"], standing["goalsAgainstPctg"])
@@ -210,6 +215,8 @@ class ESPN:
             prev_sunday_dict = {}
             for team_name in team_names:
                 prev_sunday_dict[team_name] = prev_data[team_name]['Games']['Weekdays']['Sun']
+        else:
+            prev_sunday_dict = {}
         analysis_dict = {
             team_names[i]: {
                 "Games": {
@@ -225,7 +232,7 @@ class ESPN:
                         "Sat": 0,
                         "Sun": 0
                     },
-                    'PrevSun': prev_sunday_dict[team_names[i]],
+                    'PrevSun': prev_sunday_dict.get(team_names[i], 0),
                     'BB': 0,
                     'Rest': 0
                 }
@@ -291,6 +298,29 @@ class ESPN:
                     team_dict['BB'] += 1
                 prev_val = val
         return games_dict
-            
+    
+    # def graph_matchup_ranks(self):
+    #     files = os.listdir('.')
+    #     matchup_files = fnmatch.filter(files, "matchup_*_ranked.json")
 
+            
+    def convert_to_csv(self, filename: str):
+        with open(f"{filename[:-5]}_ranked.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        # Flatten JSON
+        rows = []
+        for team, stats in data.items():
+            games = stats['Games']
+            weekdays = games.pop('Weekdays')
+            row = {
+                'Team Name': team,
+                **games,
+                **{f'Weekday.{k}': v for k, v in weekdays.items()}
+            }
+            rows.append(row)
+
+        df = pl.DataFrame(rows)
+        df.write_csv(f"{filename[:-5]}_ranked.csv")
+        
 ESPN_data = ESPN()
